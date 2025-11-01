@@ -18,8 +18,8 @@ jobs:
           sudo apt install -y u-boot-tools device-tree-compiler
       - name: Test
         run: |
-          wget https://downloads.openwrt.org/releases/23.05.4/targets/mediatek/filogic/openwrt-23.05.4-mediatek-filogic-cmcc_rax3000m-squashfs-sysupgrade.itb && \
-          python3 patch_itb.py openwrt-23.05.4-mediatek-filogic-cmcc_rax3000m-squashfs-sysupgrade.itb patched.itb && \
+          wget https://downloads.openwrt.org/releases/23.05.6/targets/mediatek/filogic/openwrt-23.05.6-mediatek-filogic-jcg_q30-pro-squashfs-sysupgrade.itb && \
+          python3 patch_itb.py openwrt-23.05.6-mediatek-filogic-jcg_q30-pro-squashfs-sysupgrade.itb patched.itb && \
           (echo "90840502210d1cd311967f9b8024b7fb  patched.itb" | md5sum -c)
   rax3000m-op24_10_0_rc2:
     runs-on: ubuntu-latest
@@ -34,6 +34,6 @@ jobs:
           sudo apt install -y u-boot-tools device-tree-compiler
       - name: Test
         run: |
-          wget https://downloads.openwrt.org/releases/24.10.0-rc2/targets/mediatek/filogic/openwrt-24.10.0-rc2-mediatek-filogic-cmcc_rax3000m-squashfs-sysupgrade.itb && \
-          python3 patch_itb.py openwrt-24.10.0-rc2-mediatek-filogic-cmcc_rax3000m-squashfs-sysupgrade.itb patched.itb && \
-          (echo "a7c48477c64724348ee0b4e2630bd031  patched.itb" | md5sum -c)
+          wget https://downloads.openwrt.org/releases/24.10.4/targets/mediatek/filogic/openwrt-24.10.4-mediatek-filogic-jcg_q30-pro-squashfs-sysupgrade.itb && \
+          python3 patch_itb.py openwrt-24.10.4-mediatek-filogic-jcg_q30-pro-squashfs-sysupgrade.itb patched.itb && \
+          (echo "306f1c5407de85645fbae31757ff3564  patched.itb" | md5sum -c)
